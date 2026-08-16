@@ -1,0 +1,29 @@
+# ---- Confidential: NEVER push to GitHub ----
+# Assessment papers and answer keys are Drive-only (WSQ confidential).
+assessment/
+reference/old_assessment/
+
+# Internal Drive links / credentials
+.env
+.claude/.env
+.claude/lms_tms_api_key
+*.key
+*.pem
+
+# ---- OS / editor junk ----
+.DS_Store
+._*
+Thumbs.db
+~$*
+.~lock.*
+
+# ---- Build artifacts ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+build/render/
+*.zip
+
+# Playwright MCP scratch
+.playwright-mcp/
