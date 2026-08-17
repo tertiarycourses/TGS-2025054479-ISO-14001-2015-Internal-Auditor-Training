@@ -2,10 +2,11 @@
 """Build the standalone activity pack for TGS-2025054479.
 
 For each activity, from the SAME source the deck and the Learner Guide use:
-  activities/activity-N-<slug>.md    the learner-facing brief (markdown)
-  activities/activity-N-<slug>.docx  the same brief, WSQ-formatted
-  activities/activity-N-<slug>.pdf   rendered PDF (the user asked for PDFs)
-  activities/README.md               the index
+  activities/activity-N-<slug>/            one folder per activity
+    activity-N-<slug>.md                   learner brief (markdown)
+    activity-N-<slug>.docx / .pdf          learner brief (Word / PDF)
+    activity-N-<slug>-trainer.docx / .pdf  trainer pack (model answers + debrief)
+  activities/README.md                     the index
 
 The learner brief deliberately EXCLUDES the model answer and the trainer debrief —
 those go in a separate trainer pack so the briefs can be handed out in class.
@@ -80,7 +81,7 @@ def build_docx(a, trainer=False):
     P.style_base(doc)
 
     kind = f"Activity {a['num']}" + (" — Trainer Pack" if trainer else "")
-    P.add_cover_page(doc, kind, C.TITLE, "5.0", C.COURSE_CODE, org_logo=LOGO)
+    P.add_cover_page(doc, kind, C.TITLE, "6.0", C.COURSE_CODE, org_logo=LOGO)
 
     h(doc, f"Activity {a['num']} — {a['title']}", 1)
     para(doc, f"**Topic {int(a['topic'])}**  ·  **{a['minutes']} minutes**  ·  "
@@ -205,14 +206,16 @@ def main():
     made = []
     for a in ACTIVITIES:
         base = f"activity-{a['num']}-{slug(a['title'])}"
+        folder = os.path.join(OUT, base)          # one folder per activity
+        os.makedirs(folder, exist_ok=True)
         # markdown (learner)
-        with open(os.path.join(OUT, base + ".md"), "w") as f:
+        with open(os.path.join(folder, base + ".md"), "w") as f:
             f.write(build_md(a))
         # docx learner + trainer
-        build_docx(a, trainer=False).save(os.path.join(OUT, base + ".docx"))
-        build_docx(a, trainer=True).save(os.path.join(OUT, base + "-trainer.docx"))
-        made.append((a, base))
-        print("  built", base)
+        build_docx(a, trainer=False).save(os.path.join(folder, base + ".docx"))
+        build_docx(a, trainer=True).save(os.path.join(folder, base + "-trainer.docx"))
+        made.append((a, base, folder))
+        print("  built", base + "/")
 
     # index
     idx = [f"# Activities — {C.TITLE}", "",
@@ -224,11 +227,20 @@ def main():
            "`-trainer` pack.", "",
            "| # | Activity | Topic | Duration | Assesses | Files |",
            "|---|---|---|---|---|---|"]
-    for a, base in made:
+    for a, base, _folder in made:
         idx.append(f"| {a['num']} | {a['title']} | Topic {int(a['topic'])} | "
                    f"{a['minutes']} min | {a['ka']} | "
-                   f"[md]({base}.md) · [docx]({base}.docx) · [pdf]({base}.pdf) |")
-    idx += ["", "## How these are used", "",
+                   f"[`{base}/`]({base}/) |")
+    idx += ["", "## Folder layout", "",
+            "Each activity lives in its own folder:", "", "```"]
+    for a, base, _f in made:
+        idx += [f"{base}/",
+                f"  {base}.md              learner brief (markdown)",
+                f"  {base}.docx            learner brief (Word)",
+                f"  {base}.pdf             learner brief (PDF)",
+                f"  {base}-trainer.docx    trainer pack — adds model answers + debrief",
+                f"  {base}-trainer.pdf     trainer pack (PDF)"]
+    idx += ["```", "", "## How these are used", "",
             "- Learners receive the **learner brief** (`.pdf` / `.docx`) in class.",
             "- Trainers use the **`-trainer.docx`** pack, which adds the model answer, the "
             "answer guidance per question and the debrief notes.",
@@ -239,13 +251,17 @@ def main():
         f.write("\n".join(idx) + "\n")
     print("  built README.md")
 
-    # PDFs
-    docxs = [os.path.join(OUT, f) for f in sorted(os.listdir(OUT)) if f.endswith(".docx")]
-    if docxs:
-        subprocess.run([SOFFICE, "--headless", "--convert-to", "pdf",
-                        "--outdir", OUT] + docxs,
-                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        print(f"  rendered {len(docxs)} PDFs")
+    # PDFs — rendered into each activity's own folder
+    total = 0
+    for _a, _base, folder in made:
+        docxs = [os.path.join(folder, f) for f in sorted(os.listdir(folder))
+                 if f.endswith(".docx")]
+        if docxs:
+            subprocess.run([SOFFICE, "--headless", "--convert-to", "pdf",
+                            "--outdir", folder] + docxs,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            total += len(docxs)
+    print(f"  rendered {total} PDFs into their activity folders")
 
 
 if __name__ == "__main__":

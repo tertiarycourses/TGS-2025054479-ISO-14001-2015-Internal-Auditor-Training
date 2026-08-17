@@ -1,6 +1,6 @@
 # WSQ — ISO 14001:2015 Internal Auditor Training
 
-**Course code:** `TGS-2025054479` · **Version:** v5 · 17 August 2026
+**Course code:** `TGS-2025054479` · **Version:** v6 · 17 August 2026
 **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)
 **Course page:** https://www.tertiarycourses.com.sg/wsq-iso-14001-2015-internal-auditor-training.html
 
@@ -16,6 +16,7 @@ internal audit of an Environmental Management System based on **ISO 14001:2015**
 | **Mode** | Classroom / instructor-led |
 | **Assessment** | Written Assessment (SAQ) 4 questions · 60 min · Case Study 3 questions · 60 min — both open book |
 | **Grading** | Competent (C) / Not Yet Competent (NYC) |
+| **Funding validity** | 11 Apr 2025 to 10 Apr 2027 |
 
 ---
 
@@ -53,12 +54,15 @@ and debrief notes.
 
 ```
 courseware/
-  ISO 14001-2015 Internal Auditor Training-v5.pptx   trainer slide deck (106 slides)
-  ISO 14001-2015 Internal Auditor Training-v5.pdf    learner slides
+  ISO 14001-2015 Internal Auditor Training-v6.pptx   trainer slide deck (106 slides)
+  ISO 14001-2015 Internal Auditor Training-v6.pdf    learner slides
   LP-…docx / .pdf                                    Lesson Plan
   LG-…docx / .pdf                                    Learner Guide
   assets/                                            generated diagrams (matplotlib)
-activities/                                          3 activity briefs — md · docx · pdf (+ trainer packs)
+activities/                                          one folder per activity
+  activity-1-…/                                      md · docx · pdf + trainer pack
+  activity-2-…/
+  activity-3-…/
 build/                                               the single-source generators
   course_data.py                                     SINGLE SOURCE OF TRUTH (metadata, outcomes, topics)
   data_domain1..3.py                                 the three activities
@@ -78,7 +82,7 @@ asserts at build time that the day totals equal 14 h facilitation + 2 h assessme
 
 ```bash
 python3 build/make_charts.py          # regenerate the diagrams
-python3 build/build_slides.py         # deck  -> courseware/…-v5.pptx
+python3 build/build_slides.py         # deck  -> courseware/…-v6.pptx
 python3 build/build_lesson_plan.py    # LP    -> courseware/LP-….docx
 python3 build/build_learner_guide.py  # LG    -> courseware/LG-….docx + LG-….md
 python3 build/build_activities.py     # activity briefs (md + docx + pdf)

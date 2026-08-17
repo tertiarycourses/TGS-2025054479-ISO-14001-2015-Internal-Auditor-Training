@@ -19,7 +19,7 @@ Authoritative sources for the structure below:
 TITLE        = "ISO 14001:2015 Internal Auditor Training"
 SHORT_TITLE  = "ISO 14001-2015 Internal Auditor Training"
 COURSE_CODE  = "TGS-2025054479"
-VERSION      = "v5"
+VERSION      = "v6"
 VERSION_DATE = "17 August 2026"
 
 ORG     = "Tertiary Infotech Academy Pte Ltd"
@@ -144,5 +144,8 @@ RECOMMENDED = [
     "WSQ - Sustainability Reporting and ESG Essentials",
     "WSQ - Carbon Footprint Accounting and Management",
 ]
+
+# Funding validity as published on the course page (tertiarycourses.com.sg)
+FUNDING_VALIDITY = "11 Apr 2025 to 10 Apr 2027"
 
 LMS_URL = "https://lms-tms.tertiaryinfotech.com"

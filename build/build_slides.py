@@ -172,11 +172,13 @@ flow_h("Assessment Flow", [
 ], kicker="ON ASSESSMENT DAY")
 
 tile_grid("Criteria for WSQ Funding", [
+    ("Funding validity", f"This course is funded from {C.FUNDING_VALIDITY}."),
     ("Attendance", "Minimum 75% attendance based on the SSG digital attendance record."),
     ("Assessment", "Complete both instruments and be assessed as Competent (C)."),
     ("TRAQOM", "Complete the TRAQOM survey on the LMS."),
     ("SkillsFuture Credit", "Eligible individuals may use SkillsFuture Credit to offset "
                             "course fees. See www.skillsfuture.gov.sg."),
+    ("Course code", f"{C.COURSE_CODE} · TSC {C.TSC_CODE}"),
 ], kicker="ELIGIBILITY", cols=2, size=14)
 
 # ============================================================ TOPIC 1

@@ -38,6 +38,9 @@ VERSIONS = [
      "case-study activities (GreenPack, AquaPure, EcoTech) with full step-by-step "
      "guidance, questions, model answers and self-check criteria.",
      "Tertiary Infotech Academy"),
+    ("6.0", C.VERSION_DATE,
+     "Added the WSQ funding validity period (11 Apr 2025 to 10 Apr 2027) and a Funding "
+     "and Eligibility section.", "Tertiary Infotech Academy"),
 ]
 
 MD = []          # markdown mirror accumulates here
@@ -159,12 +162,12 @@ def main():
     sec.top_margin = sec.bottom_margin = Cm(2.0)
     P.style_base(doc)
 
-    P.add_cover_page(doc, "Learner Guide", C.TITLE, "5.0", C.COURSE_CODE, org_logo=LOGO)
+    P.add_cover_page(doc, "Learner Guide", C.TITLE, "6.0", C.COURSE_CODE, org_logo=LOGO)
     P.add_version_control(doc, VERSIONS)
     P.add_toc(doc)
 
     MD.append(f"# Learner Guide — {C.TITLE}")
-    MD.append(f"\n**TGS Ref No:** {C.COURSE_CODE}  ·  **Version:** 5.0  ·  "
+    MD.append(f"\n**TGS Ref No:** {C.COURSE_CODE}  ·  **Version:** 6.0  ·  "
               f"**{C.VERSION_DATE}**")
     MD.append(f"\n{C.ORG} ({C.UEN})\n")
 
@@ -188,7 +191,14 @@ def main():
                  [[c, d, "Case Study (CS)"] for c, d in C.TSC_ABILITIES],
                  widths=[1.6, 11.5, 4.0])
 
-    h2(doc, "1.3 How to Use This Guide")
+    h2(doc, "1.3 Funding and Eligibility")
+    para(doc, f"Funding for this course is valid from **{C.FUNDING_VALIDITY}**. To qualify "
+              f"for WSQ funding you must achieve a minimum **75% attendance** on the SSG "
+              f"digital attendance record, be assessed **Competent (C)** in both "
+              f"instruments, and complete the **TRAQOM survey** on the LMS. Eligible "
+              f"individuals may use SkillsFuture Credit to offset the course fee.")
+
+    h2(doc, "1.4 How to Use This Guide")
     para(doc, "Work through Topics 1–3 alongside the slides. Every activity in Section 5 "
               "gives you the full scenario, the step-by-step method, the questions to "
               "answer, and a self-check. **Both assessments are open book** — this guide is "

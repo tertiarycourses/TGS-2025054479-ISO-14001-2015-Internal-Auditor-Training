@@ -51,6 +51,10 @@ VERSIONS = [
      "to 14 h facilitation + 2 h assessment with no timing gaps. Three case-study "
      "activities added (GreenPack, AquaPure, EcoTech) with slide references generated "
      "from the deck.", "Tertiary Infotech Academy"),
+    ("6.0", C.VERSION_DATE,
+     "Added the WSQ funding validity period (11 Apr 2025 to 10 Apr 2027) to the course "
+     "information, the funding-criteria slide and the Learner Guide.",
+     "Tertiary Infotech Academy"),
 ]
 
 def _lay(start_hhmm, blocks):
@@ -256,7 +260,7 @@ def main():
     sec.top_margin = sec.bottom_margin = Cm(1.5)
 
     P.style_base(doc)
-    P.add_cover_page(doc, "Lesson Plan", C.TITLE, "5.0", C.COURSE_CODE, org_logo=LOGO)
+    P.add_cover_page(doc, "Lesson Plan", C.TITLE, "6.0", C.COURSE_CODE, org_logo=LOGO)
     P.add_version_control(doc, VERSIONS)
     P.add_toc(doc)
 
@@ -276,6 +280,7 @@ def main():
              "Written Assessment – Short Answer Questions (WA/SAQ), 1 hour · "
              "Case Study (CS), 1 hour · both open book"),
             ("Grading", C.ASSESSMENT["grading"]),
+            ("Funding Validity", C.FUNDING_VALIDITY),
             ("Max Class Size", "20 learners")]
     t = doc.add_table(rows=0, cols=2); t.style = "Table Grid"
     for k, v in info:

@@ -1,6 +1,6 @@
 # Learner Guide — ISO 14001:2015 Internal Auditor Training
 
-**TGS Ref No:** TGS-2025054479  ·  **Version:** 5.0  ·  **17 August 2026**
+**TGS Ref No:** TGS-2025054479  ·  **Version:** 6.0  ·  **17 August 2026**
 
 Tertiary Infotech Academy Pte Ltd (UEN: 201200696W)
 
@@ -32,7 +32,12 @@ It runs over **2 days** — 14 hours of facilitation plus 2 hours of assessment 
 | A3 | Support conduct of preliminary survey and risk assessment | Case Study (CS) |
 
 
-### 1.3 How to Use This Guide
+### 1.3 Funding and Eligibility
+
+Funding for this course is valid from **11 Apr 2025 to 10 Apr 2027**. To qualify for WSQ funding you must achieve a minimum **75% attendance** on the SSG digital attendance record, be assessed **Competent (C)** in both instruments, and complete the **TRAQOM survey** on the LMS. Eligible individuals may use SkillsFuture Credit to offset the course fee.
+
+
+### 1.4 How to Use This Guide
 
 Work through Topics 1–3 alongside the slides. Every activity in Section 5 gives you the full scenario, the step-by-step method, the questions to answer, and a self-check. **Both assessments are open book** — this guide is your primary reference, so annotate it freely during the course.
 

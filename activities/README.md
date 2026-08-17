@@ -1,14 +1,39 @@
 # Activities — ISO 14001:2015 Internal Auditor Training
 
-**Course code:** TGS-2025054479  ·  **Version:** v5  ·  17 August 2026
+**Course code:** TGS-2025054479  ·  **Version:** v6  ·  17 August 2026
 
 Three scenario-based case-study activities, one per topic. Each brief is self-contained: scenario, given evidence, step-by-step method, questions and a self-check. Full model answers are in the Learner Guide and in the matching `-trainer` pack.
 
 | # | Activity | Topic | Duration | Assesses | Files |
 |---|---|---|---|---|---|
-| 1 | Auditing GreenPack — Framework, Context and Scope | Topic 1 | 45 min | K1 · K2 · A1 | [md](activity-1-auditing-greenpack-framework-context-and-scope.md) · [docx](activity-1-auditing-greenpack-framework-context-and-scope.docx) · [pdf](activity-1-auditing-greenpack-framework-context-and-scope.pdf) |
-| 2 | AquaPure — Planning the Engagement and the Audit Checklist | Topic 2 | 60 min | K3 · A2 | [md](activity-2-aquapure-planning-the-engagement-and-the-audit-c.md) · [docx](activity-2-aquapure-planning-the-engagement-and-the-audit-c.docx) · [pdf](activity-2-aquapure-planning-the-engagement-and-the-audit-c.pdf) |
-| 3 | EcoTech Electronics — Risk Assessment, CARs and the Audit Report | Topic 3 | 75 min | K4 · A3 | [md](activity-3-ecotech-electronics-risk-assessment-cars-and-the.md) · [docx](activity-3-ecotech-electronics-risk-assessment-cars-and-the.docx) · [pdf](activity-3-ecotech-electronics-risk-assessment-cars-and-the.pdf) |
+| 1 | Auditing GreenPack — Framework, Context and Scope | Topic 1 | 45 min | K1 · K2 · A1 | [`activity-1-auditing-greenpack-framework-context-and-scope/`](activity-1-auditing-greenpack-framework-context-and-scope/) |
+| 2 | AquaPure — Planning the Engagement and the Audit Checklist | Topic 2 | 60 min | K3 · A2 | [`activity-2-aquapure-planning-the-engagement-and-the-audit-c/`](activity-2-aquapure-planning-the-engagement-and-the-audit-c/) |
+| 3 | EcoTech Electronics — Risk Assessment, CARs and the Audit Report | Topic 3 | 75 min | K4 · A3 | [`activity-3-ecotech-electronics-risk-assessment-cars-and-the/`](activity-3-ecotech-electronics-risk-assessment-cars-and-the/) |
+
+## Folder layout
+
+Each activity lives in its own folder:
+
+```
+activity-1-auditing-greenpack-framework-context-and-scope/
+  activity-1-auditing-greenpack-framework-context-and-scope.md              learner brief (markdown)
+  activity-1-auditing-greenpack-framework-context-and-scope.docx            learner brief (Word)
+  activity-1-auditing-greenpack-framework-context-and-scope.pdf             learner brief (PDF)
+  activity-1-auditing-greenpack-framework-context-and-scope-trainer.docx    trainer pack — adds model answers + debrief
+  activity-1-auditing-greenpack-framework-context-and-scope-trainer.pdf     trainer pack (PDF)
+activity-2-aquapure-planning-the-engagement-and-the-audit-c/
+  activity-2-aquapure-planning-the-engagement-and-the-audit-c.md              learner brief (markdown)
+  activity-2-aquapure-planning-the-engagement-and-the-audit-c.docx            learner brief (Word)
+  activity-2-aquapure-planning-the-engagement-and-the-audit-c.pdf             learner brief (PDF)
+  activity-2-aquapure-planning-the-engagement-and-the-audit-c-trainer.docx    trainer pack — adds model answers + debrief
+  activity-2-aquapure-planning-the-engagement-and-the-audit-c-trainer.pdf     trainer pack (PDF)
+activity-3-ecotech-electronics-risk-assessment-cars-and-the/
+  activity-3-ecotech-electronics-risk-assessment-cars-and-the.md              learner brief (markdown)
+  activity-3-ecotech-electronics-risk-assessment-cars-and-the.docx            learner brief (Word)
+  activity-3-ecotech-electronics-risk-assessment-cars-and-the.pdf             learner brief (PDF)
+  activity-3-ecotech-electronics-risk-assessment-cars-and-the-trainer.docx    trainer pack — adds model answers + debrief
+  activity-3-ecotech-electronics-risk-assessment-cars-and-the-trainer.pdf     trainer pack (PDF)
+```
 
 ## How these are used
 
