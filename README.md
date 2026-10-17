@@ -2,7 +2,7 @@
 
 **Course code:** `TGS-2025054479` · **Version:** v6 · 17 August 2026
 **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)
-**Course page:** https://www.tertiarycourses.com.sg/wsq-iso-14001-2015-internal-auditor-training.html
+**Registration:** [View course details and register](https://www.tertiarycourses.com.sg/wsq-iso-14001-2015-internal-auditor-training.html)
 
 A 2-day (16-hour) WSQ course that prepares learners to plan, conduct, report and follow up an
 internal audit of an Environmental Management System based on **ISO 14001:2015**, using the
@@ -16,6 +16,8 @@ internal audit of an Environmental Management System based on **ISO 14001:2015**
 | **Mode** | Classroom / instructor-led |
 | **Assessment** | Written Assessment (SAQ) 4 questions · 60 min · Case Study 3 questions · 60 min — both open book |
 | **Grading** | Competent (C) / Not Yet Competent (NYC) |
+| **Programme** | WSQ |
+| **Funding** | Up to 70% course-fee funding may be available. Eligibility and other terms apply; check the registration page for current details. |
 | **Funding validity** | 11 Apr 2025 to 10 Apr 2027 |
 
 ---
@@ -44,9 +46,9 @@ and debrief notes.
 
 | # | Activity | Topic | Duration | Assesses |
 |---|---|---|---|---|
-| 1 | Auditing GreenPack — Framework, Context and Scope | 1 | 45 min | K1 · K2 · A1 |
-| 2 | AquaPure — Planning the Engagement and the Audit Checklist | 2 | 60 min | K3 · A2 |
-| 3 | EcoTech Electronics — Risk Assessment, CARs and the Audit Report | 3 | 75 min | K4 · A3 |
+| 1 | [Auditing GreenPack — Framework, Context and Scope](activities/activity-1-auditing-greenpack-framework-context-and-scope/) | 1 | 45 min | K1 · K2 · A1 |
+| 2 | [AquaPure — Planning the Engagement and the Audit Checklist](activities/activity-2-aquapure-planning-the-engagement-and-the-audit-c/) | 2 | 60 min | K3 · A2 |
+| 3 | [EcoTech Electronics — Risk Assessment, CARs and the Audit Report](activities/activity-3-ecotech-electronics-risk-assessment-cars-and-the/) | 3 | 75 min | K4 · A3 |
 
 ---
 
@@ -54,7 +56,7 @@ and debrief notes.
 
 ```
 courseware/
-  ISO 14001-2015 Internal Auditor Training-v6.pptx   trainer slide deck (106 slides)
+  ISO 14001-2015 Internal Auditor Training-v6.pptx   trainer slide deck (107 slides)
   ISO 14001-2015 Internal Auditor Training-v6.pdf    learner slides
   LP-…docx / .pdf                                    Lesson Plan
   LG-…docx / .pdf                                    Learner Guide
